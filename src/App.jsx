@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import DoctorProfile from "./components/DoctorProfile.jsx";
@@ -6,20 +7,26 @@ import TreatmentMethods from "./components/TreatmentMethods.jsx";
 import AppointmentForm from "./components/AppointmentForm.jsx";
 import RecoveryProcess from "./components/RecoveryProcess.jsx";
 import Footer from "./components/Footer.jsx";
+import BookingModal from "./components/BookingModal.jsx";
 
 export default function App() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const openBooking = () => setIsBookingOpen(true);
+  const closeBooking = () => setIsBookingOpen(false);
+
   return (
     <div className="app-shell">
-      <Header />
+      <Header onBook={openBooking} />
       <main>
-        <Hero />
+        <Hero onBook={openBooking} />
         <DoctorProfile />
-        <ServiceExplorer />
+        <ServiceExplorer onBook={openBooking} />
         <TreatmentMethods />
         <RecoveryProcess />
-        <AppointmentForm />
+        <AppointmentForm onBook={openBooking} />
       </main>
-      <Footer />
+      <Footer onBook={openBooking} />
+      <BookingModal isOpen={isBookingOpen} onClose={closeBooking} />
     </div>
   );
 }

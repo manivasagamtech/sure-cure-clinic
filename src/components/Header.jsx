@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CalendarCheck, ChevronDown, Menu, X } from "lucide-react";
 import { clinic, navGroups } from "../data/clinicData.js";
 
-export default function Header() {
+export default function Header({ onBook }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeGroup, setActiveGroup] = useState(null);
 
@@ -16,7 +16,9 @@ export default function Header() {
       <div className="utility-strip">
         <span>{clinic.location}</span>
         <span>Physiotherapy, rehab and pain care</span>
-        <a href="#appointment">Book through WhatsApp</a>
+        <button type="button" onClick={onBook}>
+          Book through WhatsApp
+        </button>
       </div>
 
       <div className="nav-shell">
@@ -40,7 +42,12 @@ export default function Header() {
               onMouseEnter={() => setActiveGroup(group.label)}
               onMouseLeave={() => setActiveGroup(null)}
             >
-              <a className="nav-link" href={group.href} onClick={closeMenus}>
+              <a
+                className={activeGroup === group.label ? "nav-link nav-link--active" : "nav-link"}
+                href={group.href}
+                onClick={closeMenus}
+                onFocus={() => setActiveGroup(group.label)}
+              >
                 {group.label}
                 <ChevronDown size={15} strokeWidth={2.4} />
               </a>
@@ -55,10 +62,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <a className="header-appointment" href="#appointment">
+        <button className="header-appointment" type="button" onClick={onBook}>
           <CalendarCheck size={18} />
           Make Appointment
-        </a>
+        </button>
 
         <button
           className="menu-button"

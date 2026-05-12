@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import { conditions, services } from "../data/clinicData.js";
@@ -8,9 +8,40 @@ const tabs = [
   { id: "services", label: "Therapy Services" },
 ];
 
-export default function ServiceExplorer() {
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+export default function ServiceExplorer({ onBook }) {
   const [activeTab, setActiveTab] = useState("conditions");
   const content = activeTab === "conditions" ? conditions : services;
+
+  useEffect(() => {
+    const syncTabWithHash = () => {
+      const hash = window.location.hash;
+
+      if (hash.startsWith("#service-")) {
+        setActiveTab("services");
+      }
+
+      if (hash.startsWith("#condition-")) {
+        setActiveTab("conditions");
+      }
+
+      if (hash.startsWith("#service-") || hash.startsWith("#condition-")) {
+        window.setTimeout(() => {
+          document.querySelector(hash)?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 80);
+      }
+    };
+
+    syncTabWithHash();
+    window.addEventListener("hashchange", syncTabWithHash);
+
+    return () => window.removeEventListener("hashchange", syncTabWithHash);
+  }, []);
 
   return (
     <section className="section services-section" id="services">
@@ -41,7 +72,12 @@ export default function ServiceExplorer() {
           {content.map((item, index) => {
             const Icon = item.icon;
             return (
-              <article className="service-card" key={item.title} style={{ "--delay": `${index * 55}ms` }}>
+              <article
+                className="service-card"
+                id={`${activeTab === "conditions" ? "condition" : "service"}-${slugify(item.title)}`}
+                key={item.title}
+                style={{ "--delay": `${index * 55}ms` }}
+              >
                 <div className="service-icon">
                   <Icon size={24} />
                 </div>
@@ -49,10 +85,10 @@ export default function ServiceExplorer() {
                 <h3>{item.title}</h3>
                 <p>{item.summary || item.description}</p>
                 {"details" in item ? <small>{item.details}</small> : null}
-                <a href="#appointment" aria-label={`Book appointment for ${item.title}`}>
+                <button type="button" onClick={onBook} aria-label={`Book appointment for ${item.title}`}>
                   Enquire now
                   <ArrowUpRight size={17} />
-                </a>
+                </button>
               </article>
             );
           })}

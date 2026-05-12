@@ -1,7 +1,7 @@
 import { ArrowRight, HeartPulse, ShieldCheck, Sparkles } from "lucide-react";
 import { clinic } from "../data/clinicData.js";
 
-export default function Hero() {
+export default function Hero({ onBook }) {
   return (
     <section className="hero-section" id="home">
       <div className="hero-background" aria-hidden="true">
@@ -17,10 +17,10 @@ export default function Hero() {
             rehabilitation, and guided long-term wellness.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="#appointment">
+            <button className="primary-button" type="button" onClick={onBook}>
               Book appointment
               <ArrowRight size={18} />
-            </a>
+            </button>
             <a className="secondary-button" href="#services">
               View services
             </a>
