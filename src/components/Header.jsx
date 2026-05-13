@@ -15,9 +15,9 @@ export default function Header({ onBook }) {
     <header className="site-header">
       <div className="utility-strip">
         <span>{clinic.location}</span>
-        <span>Physiotherapy, rehab and pain care</span>
+        <span>Advanced physiotherapy and rehabilitation care</span>
         <button type="button" onClick={onBook}>
-          Book through WhatsApp
+          Book appointment
         </button>
       </div>
 

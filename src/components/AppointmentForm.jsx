@@ -9,14 +9,14 @@ export default function AppointmentForm() {
         <div className="appointment-copy">
           <SectionHeading
             kicker="Book appointment"
-            title="Patients fill the form once. WhatsApp opens with the full message ready."
-            body="The clinic number is kept as a single configuration value. Once you provide it, the form will send users directly to the clinic chat."
+            title="Share your details and the clinic can guide the next step."
+            body="Use the form for appointment enquiries, pain concerns, treatment questions, or follow-up planning."
           />
           <div className="appointment-highlight">
             <MessageCircle size={24} />
             <div>
-              <strong>WhatsApp-first booking</strong>
-              <p>Name, phone, selected service, and the patient message are all included automatically.</p>
+              <strong>Simple appointment enquiry</strong>
+              <p>Name and phone are required. Service and message can be added when relevant.</p>
             </div>
           </div>
         </div>

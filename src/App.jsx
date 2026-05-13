@@ -11,7 +11,11 @@ import BookingModal from "./components/BookingModal.jsx";
 
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const openBooking = () => setIsBookingOpen(true);
+  const [selectedService, setSelectedService] = useState("");
+  const openBooking = (service = "") => {
+    setSelectedService(service);
+    setIsBookingOpen(true);
+  };
   const closeBooking = () => setIsBookingOpen(false);
 
   return (
@@ -26,7 +30,7 @@ export default function App() {
         <AppointmentForm onBook={openBooking} />
       </main>
       <Footer onBook={openBooking} />
-      <BookingModal isOpen={isBookingOpen} onClose={closeBooking} />
+      <BookingModal isOpen={isBookingOpen} onClose={closeBooking} selectedService={selectedService} />
     </div>
   );
 }

@@ -85,7 +85,7 @@ export default function ServiceExplorer({ onBook }) {
                 <h3>{item.title}</h3>
                 <p>{item.summary || item.description}</p>
                 {"details" in item ? <small>{item.details}</small> : null}
-                <button type="button" onClick={onBook} aria-label={`Book appointment for ${item.title}`}>
+                <button type="button" onClick={() => onBook(item.title)} aria-label={`Book appointment for ${item.title}`}>
                   Enquire now
                   <ArrowUpRight size={17} />
                 </button>

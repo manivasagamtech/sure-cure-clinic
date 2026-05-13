@@ -69,7 +69,7 @@ export const navGroups = [
     href: "#appointment",
     items: [
       { label: "Book appointment", href: "#appointment" },
-      { label: "WhatsApp enquiry", href: "#appointment" },
+      { label: "Appointment enquiry", href: "#appointment" },
     ],
   },
 ];

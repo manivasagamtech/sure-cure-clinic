@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { X } from "lucide-react";
 import BookingForm from "./BookingForm.jsx";
 
-export default function BookingModal({ isOpen, onClose }) {
+export default function BookingModal({ isOpen, onClose, selectedService = "" }) {
   useEffect(() => {
     if (!isOpen) return undefined;
 
@@ -34,10 +34,9 @@ export default function BookingModal({ isOpen, onClose }) {
         </button>
         <div className="booking-modal__intro">
           <span className="section-kicker">Book appointment</span>
-          <h2 id="booking-modal-title">Send your appointment request through WhatsApp.</h2>
-          <p>Fill the details and the next step opens WhatsApp with your message already prepared.</p>
+          <h2 id="booking-modal-title">Book your appointment.</h2>
         </div>
-        <BookingForm compact />
+        <BookingForm compact selectedService={selectedService} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CalendarCheck, MessageCircle } from "lucide-react";
 import { appointmentOptions, clinic } from "../data/clinicData.js";
 
@@ -9,18 +9,28 @@ const initialForm = {
   message: "",
 };
 
-export default function BookingForm({ compact = false }) {
+export default function BookingForm({ compact = false, selectedService = "" }) {
   const [form, setForm] = useState(initialForm);
   const [feedback, setFeedback] = useState("");
 
+  useEffect(() => {
+    setForm((current) => ({
+      ...current,
+      service: selectedService,
+    }));
+    setFeedback("");
+  }, [selectedService]);
+
   const whatsappUrl = useMemo(() => {
+    const service = form.service.trim() || "Not specified";
+    const message = form.message.trim() || "No additional message";
     const text = [
       "Hello Sure Cure Clinic,",
       "",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
-      `Service: ${form.service}`,
-      `Message: ${form.message}`,
+      `Service: ${service}`,
+      `Message: ${message}`,
     ].join("\n");
 
     const phone = clinic.whatsappNumber.replace(/\D/g, "");
@@ -36,14 +46,14 @@ export default function BookingForm({ compact = false }) {
 
   const submitForm = (event) => {
     event.preventDefault();
-    const hasMissingField = Object.values(form).some((value) => !value.trim());
+    const hasMissingField = !form.name.trim() || !form.phone.trim();
 
     if (hasMissingField) {
-      setFeedback("Please fill every field before continuing to WhatsApp.");
+      setFeedback("Please enter your name and phone number.");
       return;
     }
 
-    setFeedback("Opening WhatsApp with the appointment message prepared.");
+    setFeedback("Opening your appointment message.");
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -55,25 +65,29 @@ export default function BookingForm({ compact = false }) {
       </div>
 
       <label>
-        <span>Name</span>
+        <span>Name *</span>
         <input name="name" value={form.name} onChange={updateField} placeholder="Patient name" autoComplete="name" />
       </label>
 
       <label>
-        <span>Phone number</span>
+        <span>Phone number *</span>
         <input name="phone" value={form.phone} onChange={updateField} placeholder="+91" autoComplete="tel" />
       </label>
 
       <label>
-        <span>Service required</span>
-        <select name="service" value={form.service} onChange={updateField}>
-          <option value="">Choose a service</option>
-          {appointmentOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        <span>Service</span>
+        {selectedService ? (
+          <input name="service" value={form.service} readOnly />
+        ) : (
+          <select name="service" value={form.service} onChange={updateField}>
+            <option value="">Select if applicable</option>
+            {appointmentOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        )}
       </label>
 
       <label>
@@ -88,7 +102,7 @@ export default function BookingForm({ compact = false }) {
       </label>
 
       <button className="primary-button primary-button--full" type="submit">
-        Continue to WhatsApp
+        Submit appointment details
         <MessageCircle size={18} />
       </button>
       <p className="form-feedback" role="status" aria-live="polite">
