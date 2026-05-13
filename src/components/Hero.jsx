@@ -1,4 +1,5 @@
 import { ArrowRight, HeartPulse, ShieldCheck, Sparkles } from "lucide-react";
+import { clinic } from "../data/clinicData.js";
 import HeroMedia from "./HeroMedia.jsx";
 
 export default function Hero({ onBook }) {
