@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   --ink: #241b22;
@@ -28,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--ink);
   background:
     linear-gradient(135deg, rgba(255, 217, 232, 0.48), rgba(248, 231, 191, 0.24) 36%, rgba(255, 248, 238, 0.9)),
@@ -96,7 +96,8 @@ img {
 .section-heading h2,
 .hero-copy h1 {
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
   line-height: 1.04;
 }
 
@@ -355,9 +356,10 @@ img {
 }
 
 .hero-copy h1 {
-  max-width: 11ch;
-  font-size: clamp(4.2rem, 9vw, 8rem);
+  max-width: 13ch;
+  font-size: clamp(3.4rem, 7vw, 6.8rem);
   color: var(--plum);
+  letter-spacing: 0;
 }
 
 .hero-copy p {
@@ -405,7 +407,6 @@ img {
 }
 
 .metric-card strong {
-  font-family: "Playfair Display", serif;
   font-size: 1.45rem;
 }
 
@@ -647,7 +648,8 @@ img {
 
 .step-number {
   color: var(--gold);
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
   font-size: 2.6rem;
   line-height: 1;
 }
@@ -822,7 +824,8 @@ img {
   margin: 0;
   max-width: 10ch;
   color: var(--plum);
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
   font-size: clamp(2.2rem, 7vw, 3.5rem);
   line-height: 1.02;
 }
