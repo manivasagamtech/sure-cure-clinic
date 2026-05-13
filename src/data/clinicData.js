@@ -13,6 +13,12 @@ import {
   Zap,
 } from "lucide-react";
 
+export const slugify = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 export const clinic = {
   name: "Sure Cure Physiotherapy and Rehab Clinic",
   location: "Pune, Maharashtra",
@@ -47,21 +53,21 @@ export const navGroups = [
     label: "Conditions",
     href: "#services",
     items: [
-      { label: "Chronic pain syndrome", href: "#condition-chronic-pain-syndrome" },
-      { label: "Disc problems and sciatica", href: "#condition-disc-problems-and-sciatica" },
-      { label: "Headaches and migraine", href: "#condition-headaches-and-migraine" },
-      { label: "Arthritis and frozen shoulder", href: "#condition-arthritis-and-frozen-shoulder" },
+      { label: "Chronic pain syndrome", href: "#/condition/chronic-pain-syndrome" },
+      { label: "Disc problems and sciatica", href: "#/condition/disc-problems-and-sciatica" },
+      { label: "Headaches and migraine", href: "#/condition/headaches-and-migraine" },
+      { label: "Arthritis and frozen shoulder", href: "#/condition/arthritis-and-frozen-shoulder" },
     ],
   },
   {
     label: "Services",
     href: "#services",
     items: [
-      { label: "Dry needling", href: "#service-dry-needling-techniques" },
-      { label: "Regeneration therapy", href: "#service-regeneration-therapy-prp" },
-      { label: "Manual therapy", href: "#service-joint-mobilizations" },
-      { label: "Sports taping", href: "#service-sports-taping" },
-      { label: "Pilates", href: "#service-pilates" },
+      { label: "Dry needling", href: "#/service/dry-needling-techniques" },
+      { label: "Regeneration therapy", href: "#/service/regeneration-therapy-prp" },
+      { label: "Manual therapy", href: "#/service/joint-mobilizations" },
+      { label: "Sports taping", href: "#/service/sports-taping" },
+      { label: "Pilates", href: "#/service/pilates" },
     ],
   },
   {
@@ -216,4 +222,80 @@ export const appointmentOptions = [
   ...conditions.map((condition) => condition.title),
   ...services.map((service) => service.title),
   ...treatmentMethods.map((method) => method.label),
+];
+
+const defaultConcerns = [
+  "Pain or stiffness affecting everyday movement",
+  "Reduced confidence while working, exercising, or doing daily activities",
+  "Symptoms that need a structured assessment before treatment starts",
+];
+
+const defaultApproach = [
+  "Detailed history and movement assessment",
+  "Treatment selected according to symptoms, tolerance, and recovery stage",
+  "Home guidance and progression plan for lasting improvement",
+];
+
+const conditionDetails = {
+  "Chronic Pain Syndrome": {
+    concerns: ["Long-lasting pain that changes daily activity", "Fear of movement or repeated flare-ups", "Sleep disturbance and posture guarding"],
+    approach: ["Pain history and movement assessment", "Gentle mobility and graded strengthening", "Education for pacing, posture, and recurrence control"],
+  },
+  "Disc Problems and Sciatica": {
+    concerns: ["Low back pain with leg symptoms", "Tingling, tightness, or nerve irritation", "Difficulty bending, sitting, walking, or lifting"],
+    approach: ["Spine and nerve sensitivity assessment", "Pain-calming positions and mobility drills", "Core, hip, and posture strengthening progression"],
+  },
+  "Headaches and Migraine": {
+    concerns: ["Repeated headaches linked with neck stiffness", "Shoulder tension and screen-related posture load", "Migraine episodes worsened by muscle tightness"],
+    approach: ["Neck, shoulder, and posture assessment", "Manual therapy and mobility restoration", "Ergonomic guidance and home exercises"],
+  },
+  "Arthritis and Frozen Shoulder": {
+    concerns: ["Painful stiffness around shoulder or joints", "Reduced range while dressing, reaching, or lifting", "Arthritic discomfort affecting daily function"],
+    approach: ["Joint range and irritability assessment", "Mobilization and progressive stretching", "Strengthening for function and long-term support"],
+  },
+};
+
+const serviceDetails = {
+  "Dry Needling Techniques": {
+    concerns: ["Trigger point pain", "Muscle tightness limiting movement", "Pain that does not settle with stretching alone"],
+    approach: ["Identify sensitive muscle bands", "Apply needling where clinically suitable", "Follow with mobility and strengthening work"],
+  },
+  "Regeneration Therapy (PRP)": {
+    concerns: ["Persistent tendon or joint-related complaints", "Recovery cases needing structured follow-up", "Pain where healing support is part of the plan"],
+    approach: ["Clinical screening and suitability review", "Recovery planning around the procedure", "Progressive rehabilitation after symptom response"],
+  },
+  "Joint Mobilizations": {
+    concerns: ["Joint stiffness", "Restricted movement range", "Pain with daily movement"],
+    approach: ["Movement and joint play assessment", "Targeted mobilization techniques", "Exercise to maintain the gained range"],
+  },
+  "Sports Taping": {
+    concerns: ["Sports strain", "Joint overload", "Need for short-term support during activity"],
+    approach: ["Assess activity and support need", "Apply taping for the target area", "Guide safe loading and return to movement"],
+  },
+  Pilates: {
+    concerns: ["Poor core control", "Postural imbalance", "Need for gentle strength and mobility work"],
+    approach: ["Assess control and breathing patterns", "Guided Pilates-based movement", "Progress balance, strength, and posture"],
+  },
+};
+
+export const detailPages = [
+  ...conditions.map((condition) => ({
+    ...condition,
+    type: "condition",
+    slug: slugify(condition.title),
+    category: "Condition care",
+    description: condition.summary,
+    concerns: conditionDetails[condition.title]?.concerns || defaultConcerns,
+    approach: conditionDetails[condition.title]?.approach || defaultApproach,
+  })),
+  ...services.map((service) => ({
+    ...service,
+    type: "service",
+    slug: slugify(service.title),
+    summary: service.description,
+    details:
+      "This therapy is selected after assessment and combined with exercise, education, and follow-up guidance so the treatment supports a complete recovery plan.",
+    concerns: serviceDetails[service.title]?.concerns || defaultConcerns,
+    approach: serviceDetails[service.title]?.approach || defaultApproach,
+  })),
 ];
