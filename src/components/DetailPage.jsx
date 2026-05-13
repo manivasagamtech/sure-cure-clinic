@@ -6,7 +6,7 @@ export default function DetailPage({ page }) {
 
   return (
     <main className="detail-page">
-      <section className="detail-hero">
+      <section className="detail-hero" style={{ "--detail-image": `url(${page.image})` }}>
         <div className="container detail-hero__grid">
           <div className="detail-hero__copy">
             <a className="back-link" href="#services">
@@ -18,6 +18,9 @@ export default function DetailPage({ page }) {
             <p>{page.summary || page.description}</p>
           </div>
           <div className="detail-hero__card">
+            <div className="detail-hero__thumb">
+              <img src={page.image} alt={page.imageAlt} />
+            </div>
             <Icon size={34} />
             <strong>Personalized assessment first</strong>
             <span>
@@ -31,6 +34,9 @@ export default function DetailPage({ page }) {
       <section className="section detail-content-section">
         <div className="container detail-layout">
           <article className="detail-content">
+            <div className="detail-content__image">
+              <img src={page.image} alt={page.imageAlt} />
+            </div>
             <h2>Understanding {page.title}</h2>
             <p>{page.details}</p>
             <p>

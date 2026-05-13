@@ -48,6 +48,9 @@ export default function ServiceExplorer() {
                 key={item.title}
                 style={{ "--delay": `${index * 55}ms` }}
               >
+                <div className="service-card__media">
+                  <img src={item.image} alt={item.imageAlt} loading="lazy" />
+                </div>
                 <div className="service-icon">
                   <Icon size={24} />
                 </div>

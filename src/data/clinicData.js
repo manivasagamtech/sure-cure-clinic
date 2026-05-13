@@ -97,6 +97,8 @@ export const conditions = [
   {
     title: "Chronic Pain Syndrome",
     icon: HeartPulse,
+    image: "https://images.pexels.com/photos/7298893/pexels-photo-7298893.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Person holding their lower back to show chronic pain discomfort",
     summary:
       "Care for persistent pain patterns that affect sleep, posture, movement confidence, and daily routines.",
     details:
@@ -105,6 +107,8 @@ export const conditions = [
   {
     title: "Disc Problems and Sciatica",
     icon: Bone,
+    image: "https://images.pexels.com/photos/20860586/pexels-photo-20860586.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist assessing a patient with back pain in a clinic",
     summary:
       "Rehabilitation for back pain, radiating leg pain, nerve irritation, and spine-related movement restriction.",
     details:
@@ -113,6 +117,8 @@ export const conditions = [
   {
     title: "Headaches and Migraine",
     icon: Brain,
+    image: "https://images.pexels.com/photos/7298881/pexels-photo-7298881.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Person holding the neck area during neck pain and headache discomfort",
     summary:
       "Support for recurring headaches where neck tension, posture load, and muscle restriction may contribute.",
     details:
@@ -121,6 +127,8 @@ export const conditions = [
   {
     title: "Arthritis and Frozen Shoulder",
     icon: StretchHorizontal,
+    image: "https://images.pexels.com/photos/30483023/pexels-photo-30483023.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist adjusting a patient's shoulder during therapy",
     summary:
       "Mobility-focused treatment for joint stiffness, pain, shoulder restriction, and reduced functional range.",
     details:
@@ -132,6 +140,8 @@ export const services = [
   {
     title: "Dry Needling Techniques",
     icon: Sparkles,
+    image: "https://images.pexels.com/photos/20860599/pexels-photo-20860599.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist working on neck muscle pain in a clinic setting",
     category: "Pain modulation",
     description:
       "Targets tight trigger points and overactive muscles to support pain relief, better mobility, and smoother rehabilitation work.",
@@ -139,6 +149,8 @@ export const services = [
   {
     title: "Regeneration Therapy (PRP)",
     icon: Activity,
+    image: "https://images.pexels.com/photos/5214997/pexels-photo-5214997.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Clinical consultation before a regenerative therapy plan",
     category: "Recovery support",
     description:
       "Used in selected cases where tissue healing support and recovery planning are important parts of the treatment path.",
@@ -146,6 +158,8 @@ export const services = [
   {
     title: "Joint Mobilizations",
     icon: MoveRight,
+    image: "https://images.pexels.com/photos/20860576/pexels-photo-20860576.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist mobilizing a patient's arm and shoulder",
     category: "Mobility care",
     description:
       "Hands-on techniques to improve restricted joints, reduce stiffness, and help patients move with more comfort.",
@@ -153,6 +167,8 @@ export const services = [
   {
     title: "Osteopathic Joint Analysis and Manipulations",
     icon: Stethoscope,
+    image: "https://images.pexels.com/photos/20860605/pexels-photo-20860605.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist performing a neck and joint assessment",
     category: "Movement assessment",
     description:
       "A structured approach to evaluate movement restrictions and apply targeted manual correction where appropriate.",
@@ -160,6 +176,8 @@ export const services = [
   {
     title: "Sports Taping",
     icon: BadgeCheck,
+    image: "https://images.pexels.com/photos/8219160/pexels-photo-8219160.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Therapist applying kinesio tape for supportive therapy",
     category: "Support and stability",
     description:
       "Taping support for overloaded or recovering areas, helping patients manage strain while returning to activity.",
@@ -167,6 +185,8 @@ export const services = [
   {
     title: "Strength and Conditioning",
     icon: Dumbbell,
+    image: "https://images.pexels.com/photos/20860615/pexels-photo-20860615.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Physiotherapist helping a patient with a back exercise",
     category: "Performance rehab",
     description:
       "Progressive exercise plans that rebuild capacity, improve resilience, and support long-term return to function.",
@@ -174,6 +194,8 @@ export const services = [
   {
     title: "Nutritional Consultation",
     icon: HeartPulse,
+    image: "https://images.pexels.com/photos/15319020/pexels-photo-15319020.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Nutrition consultation with fruits and a health professional",
     category: "Lifestyle support",
     description:
       "Practical guidance around recovery habits, body weight goals, and routines that support musculoskeletal health.",
@@ -181,6 +203,8 @@ export const services = [
   {
     title: "Obesity Management",
     icon: Activity,
+    image: "https://images.pexels.com/photos/20860615/pexels-photo-20860615.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Guided physiotherapy exercise for safe movement progression",
     category: "Guided movement",
     description:
       "Movement planning that considers joint load, stamina, confidence, and safe progression for long-term consistency.",
@@ -188,6 +212,8 @@ export const services = [
   {
     title: "Ergonomic Guidance",
     icon: Stethoscope,
+    image: "https://images.pexels.com/photos/8376266/pexels-photo-8376266.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Health professional explaining guidance during a desk-based consultation",
     category: "Work and posture",
     description:
       "Workstation and daily posture guidance for patients dealing with neck, back, shoulder, or repetitive strain issues.",
@@ -195,6 +221,8 @@ export const services = [
   {
     title: "Aesthetic Management",
     icon: Sparkles,
+    image: "https://images.pexels.com/photos/14438367/pexels-photo-14438367.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Clinical aesthetic treatment being performed on a patient's face",
     category: "Extended care",
     description:
       "A supportive service area connected to the clinic's wider care skillset and medical cosmetology training.",
@@ -202,6 +230,8 @@ export const services = [
   {
     title: "Pilates",
     icon: StretchHorizontal,
+    image: "https://images.pexels.com/photos/4325466/pexels-photo-4325466.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "Pilates-style controlled movement and stretching session",
     category: "Control and balance",
     description:
       "Controlled movement training for core strength, posture, breathing, alignment, balance, and body awareness.",
