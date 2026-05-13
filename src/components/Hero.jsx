@@ -1,12 +1,10 @@
 import { ArrowRight, HeartPulse, ShieldCheck, Sparkles } from "lucide-react";
-import { clinic } from "../data/clinicData.js";
+import HeroMedia from "./HeroMedia.jsx";
 
 export default function Hero({ onBook }) {
   return (
     <section className="hero-section" id="home">
-      <div className="hero-background" aria-hidden="true">
-        <img src={clinic.heroImage} alt="" />
-      </div>
+      <HeroMedia />
       <div className="hero-overlay" />
       <div className="container hero-content">
         <div className="hero-copy">

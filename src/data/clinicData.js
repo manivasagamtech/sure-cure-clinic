@@ -30,6 +30,29 @@ export const clinic = {
     "https://images.pexels.com/photos/6111627/pexels-photo-6111627.jpeg?auto=compress&cs=tinysrgb&w=1200",
 };
 
+export const heroMediaSlides = [
+  {
+    label: "Back pain physiotherapy session",
+    desktopVideo: "https://assets.mixkit.co/videos/13059/13059-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/5356/5356-720.mp4",
+    poster: clinic.heroImage,
+  },
+  {
+    label: "Shoulder physiotherapy treatment",
+    desktopVideo: "https://assets.mixkit.co/videos/13039/13039-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/1321/1321-720.mp4",
+    poster:
+      "https://images.pexels.com/photos/30483023/pexels-photo-30483023.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+  {
+    label: "Guided recovery and strengthening",
+    desktopVideo: "https://assets.mixkit.co/videos/18265/18265-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/52080/52080-720.mp4",
+    poster:
+      "https://images.pexels.com/photos/20860615/pexels-photo-20860615.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  },
+];
+
 export const navGroups = [
   {
     label: "Home",
