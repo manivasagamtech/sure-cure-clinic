@@ -2,7 +2,11 @@ import { heroMediaSlides } from "../data/clinicData.js";
 
 export default function HeroMedia() {
   return (
-    <div className="hero-background hero-background--video" aria-hidden="true">
+    <div
+      className="hero-background hero-background--video"
+      style={{ "--slide-count": heroMediaSlides.length }}
+      aria-hidden="true"
+    >
       {heroMediaSlides.map((slide, index) => (
         <video
           className="hero-video-slide"

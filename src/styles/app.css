@@ -383,7 +383,7 @@ img {
   inset: 0;
   opacity: 0;
   transform: scale(1.04);
-  animation: heroVideoCycle 9s infinite ease-in-out;
+  animation: heroVideoCycle calc(var(--slide-count) * 3s) infinite ease-in-out;
   animation-delay: calc(var(--slide-index) * 3s);
 }
 
@@ -1182,12 +1182,12 @@ img {
 
 @keyframes heroVideoCycle {
   0%,
-  31% {
+  18% {
     opacity: 1;
     transform: scale(1.04);
   }
 
-  36%,
+  24%,
   95% {
     opacity: 0;
     transform: scale(1.09);

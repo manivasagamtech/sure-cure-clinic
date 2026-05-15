@@ -42,24 +42,34 @@ export const clinic = {
 
 export const heroMediaSlides = [
   {
-    label: "Back pain physiotherapy session",
-    desktopVideo: "https://assets.mixkit.co/videos/13059/13059-720.mp4",
-    mobileVideo: "https://assets.mixkit.co/videos/5356/5356-720.mp4",
-    poster: clinic.heroImage,
+    label: "Physiotherapist assessing patient movement",
+    desktopVideo: "https://assets.mixkit.co/videos/49541/49541-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/49541/49541-720.mp4",
+    poster: "https://assets.mixkit.co/videos/49541/49541-thumb-360-0.jpg",
   },
   {
-    label: "Shoulder physiotherapy treatment",
-    desktopVideo: "https://assets.mixkit.co/videos/13039/13039-720.mp4",
-    mobileVideo: "https://assets.mixkit.co/videos/1321/1321-720.mp4",
-    poster:
-      "https://images.pexels.com/photos/30483023/pexels-photo-30483023.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    label: "Assisted physical therapy in a clinical room",
+    desktopVideo: "https://assets.mixkit.co/videos/5561/5561-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/5561/5561-720.mp4",
+    poster: "https://assets.mixkit.co/videos/5561/5561-thumb-360-0.jpg",
   },
   {
-    label: "Guided recovery and strengthening",
-    desktopVideo: "https://assets.mixkit.co/videos/18265/18265-720.mp4",
-    mobileVideo: "https://assets.mixkit.co/videos/52080/52080-720.mp4",
-    poster:
-      "https://images.pexels.com/photos/20860615/pexels-photo-20860615.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    label: "Physiotherapist guiding neck therapy",
+    desktopVideo: "https://assets.mixkit.co/videos/36393/36393-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/36393/36393-720.mp4",
+    poster: "https://assets.mixkit.co/videos/36393/36393-thumb-360-0.jpg",
+  },
+  {
+    label: "Clinic treatment explanation with patient",
+    desktopVideo: "https://assets.mixkit.co/videos/13164/13164-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/13164/13164-720.mp4",
+    poster: "https://assets.mixkit.co/videos/13164/13164-thumb-360-0.jpg",
+  },
+  {
+    label: "Rehab equipment training on stationary bike",
+    desktopVideo: "https://assets.mixkit.co/videos/50972/50972-720.mp4",
+    mobileVideo: "https://assets.mixkit.co/videos/50972/50972-720.mp4",
+    poster: "https://assets.mixkit.co/videos/50972/50972-thumb-360-0.jpg",
   },
 ];
 
