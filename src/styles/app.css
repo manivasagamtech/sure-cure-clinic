@@ -1095,14 +1095,25 @@ img {
   font-weight: 700;
 }
 
-.site-footer button {
+.footer-appointment-button {
   border: 0;
-  color: var(--gold-soft);
-  background: transparent;
-  padding: 0;
+  color: var(--plum);
+  background: var(--gold-soft);
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
   font: inherit;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  white-space: nowrap;
+}
+
+.footer-appointment-button:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
 }
 
 .booking-modal {

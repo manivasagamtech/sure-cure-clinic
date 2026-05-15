@@ -1,6 +1,15 @@
 import { clinic } from "../data/clinicData.js";
 
 export default function Footer({ onBook }) {
+  const handleBook = () => {
+    if (typeof onBook === "function") {
+      onBook();
+      return;
+    }
+
+    window.location.hash = "appointment";
+  };
+
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
@@ -9,7 +18,7 @@ export default function Footer({ onBook }) {
           <p>{clinic.addressLines.join(", ")}</p>
           <a href={clinic.phoneHref}>Call {clinic.phoneDisplay}</a>
         </div>
-        <button type="button" onClick={onBook}>
+        <button className="footer-appointment-button" type="button" onClick={handleBook}>
           Book appointment
         </button>
       </div>
