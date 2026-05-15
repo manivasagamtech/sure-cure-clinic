@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarCheck, ChevronDown, Menu, X } from "lucide-react";
+import { CalendarCheck, ChevronDown, Menu, Phone, X } from "lucide-react";
 import { clinic, navGroups } from "../data/clinicData.js";
 
 export default function Header({ onBook }) {
@@ -16,6 +16,7 @@ export default function Header({ onBook }) {
       <div className="utility-strip">
         <span>{clinic.location}</span>
         <span>Advanced physiotherapy and rehabilitation care</span>
+        <a href={clinic.phoneHref}>Call {clinic.phoneDisplay}</a>
         <button type="button" onClick={onBook}>
           Book appointment
         </button>
@@ -60,12 +61,34 @@ export default function Header({ onBook }) {
               </div>
             </div>
           ))}
+          <div className="mobile-nav-actions">
+            <a href={clinic.phoneHref} onClick={closeMenus}>
+              <Phone size={18} />
+              Call Now
+            </a>
+            <button
+              type="button"
+              onClick={() => {
+                closeMenus();
+                onBook();
+              }}
+            >
+              <CalendarCheck size={18} />
+              Make Appointment
+            </button>
+          </div>
         </nav>
 
-        <button className="header-appointment" type="button" onClick={onBook}>
-          <CalendarCheck size={18} />
-          Make Appointment
-        </button>
+        <div className="header-actions">
+          <a className="header-call" href={clinic.phoneHref}>
+            <Phone size={18} />
+            Call Now
+          </a>
+          <button className="header-appointment" type="button" onClick={onBook}>
+            <CalendarCheck size={18} />
+            Make Appointment
+          </button>
+        </div>
 
         <button
           className="menu-button"

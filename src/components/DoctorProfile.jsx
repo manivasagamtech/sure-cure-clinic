@@ -1,4 +1,4 @@
-import { Award, GraduationCap } from "lucide-react";
+import { Award, GraduationCap, MapPin, Phone } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import { certifications, clinic } from "../data/clinicData.js";
 
@@ -25,12 +25,31 @@ export default function DoctorProfile() {
             <Award size={22} />
             <div>
               <h3>{clinic.doctor}</h3>
+              <strong>{clinic.doctorCredentials}</strong>
               <p>
                 Completed Master's in Physiotherapy from Maharashtra University of Health Sciences,
                 Nashik, through M.A.R. College of Physiotherapy and Research, Pune, and has been
                 practicing for 15 years.
               </p>
             </div>
+          </div>
+
+          <div className="contact-card">
+            <div>
+              <MapPin size={22} />
+              <div>
+                <h3>Clinic address</h3>
+                <address>
+                  {clinic.addressLines.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </address>
+              </div>
+            </div>
+            <a href={clinic.phoneHref}>
+              <Phone size={18} />
+              Call {clinic.phoneDisplay}
+            </a>
           </div>
 
           <div className="certification-grid" id="certifications">

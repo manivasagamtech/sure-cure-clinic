@@ -123,6 +123,7 @@ img {
 
 .primary-button,
 .secondary-button,
+.header-call,
 .header-appointment {
   display: inline-flex;
   align-items: center;
@@ -152,6 +153,7 @@ img {
 
 .primary-button:hover,
 .secondary-button:hover,
+.header-call:hover,
 .header-appointment:hover {
   transform: translateY(-2px);
 }
@@ -202,6 +204,12 @@ img {
   backdrop-filter: blur(18px);
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .brand-lockup {
   display: inline-flex;
   align-items: center;
@@ -236,6 +244,10 @@ img {
   align-items: center;
   justify-content: center;
   gap: 6px;
+}
+
+.mobile-nav-actions {
+  display: none;
 }
 
 .nav-item {
@@ -309,6 +321,13 @@ img {
 .header-appointment {
   color: var(--white);
   background: linear-gradient(135deg, var(--rose-600), var(--plum));
+  white-space: nowrap;
+}
+
+.header-call {
+  border: 1px solid rgba(92, 22, 73, 0.14);
+  color: var(--plum);
+  background: rgba(255, 255, 255, 0.72);
   white-space: nowrap;
 }
 
@@ -405,6 +424,7 @@ img {
 
 .metric-card,
 .doctor-card,
+.contact-card,
 .service-card,
 .process-card,
 .appointment-form,
@@ -424,6 +444,7 @@ img {
 
 .metric-card svg,
 .doctor-card svg,
+.contact-card svg,
 .appointment-highlight svg {
   color: var(--rose-600);
 }
@@ -498,6 +519,51 @@ img {
 .doctor-card h3 {
   margin: 0 0 8px;
   font-size: 1.35rem;
+}
+
+.doctor-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--rose-600);
+}
+
+.contact-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 28px;
+}
+
+.contact-card > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+}
+
+.contact-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.contact-card address {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-style: normal;
+  line-height: 1.65;
+}
+
+.contact-card a {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--rose-600), var(--plum));
+  font-weight: 800;
 }
 
 .certification-grid {
@@ -1193,7 +1259,7 @@ img {
 }
 
 @media (max-width: 1120px) {
-  .header-appointment {
+  .header-actions {
     display: none;
   }
 
@@ -1264,6 +1330,27 @@ img {
   .primary-nav--open {
     display: grid;
     gap: 4px;
+  }
+
+  .mobile-nav-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .mobile-nav-actions a,
+  .mobile-nav-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    border: 0;
+    border-radius: 999px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--rose-600), var(--plum));
+    font: inherit;
+    font-weight: 800;
   }
 
   .nav-item {

@@ -21,9 +21,19 @@ export const slugify = (value) =>
 
 export const clinic = {
   name: "Sure Cure Physiotherapy and Rehab Clinic",
-  location: "Pune, Maharashtra",
-  doctor: "Dr. Sujata",
-  whatsappNumber: "",
+  shortName: "Sure Cure Physio",
+  location: "Bebwewadi-Kondhwa Road, Pune",
+  doctor: "Dr. Sujata Pardeshi Sure",
+  doctorCredentials: "B.PTh., M.PTh. (ORTHO), M.I.A.P.",
+  phoneDisplay: "8446398070",
+  phoneHref: "tel:+918446398070",
+  whatsappNumber: "918446398070",
+  addressLines: [
+    "Suryaprabha Garden Buldg. No. C",
+    "Flat No.: 3, Bebwewadi-Kondhwa Road",
+    "Behind Pune Adda, Opposite HDFC Bank",
+    "Pune - 411037",
+  ],
   heroImage:
     "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=1600",
   studioImage:

@@ -6,7 +6,8 @@ export default function Footer({ onBook }) {
       <div className="container footer-grid">
         <div>
           <strong>{clinic.name}</strong>
-          <p>{clinic.location}</p>
+          <p>{clinic.addressLines.join(", ")}</p>
+          <a href={clinic.phoneHref}>Call {clinic.phoneDisplay}</a>
         </div>
         <button type="button" onClick={onBook}>
           Book appointment
