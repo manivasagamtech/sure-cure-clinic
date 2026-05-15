@@ -16,6 +16,8 @@ const getCurrentDetailPage = () => {
   return detailPages.find((page) => page.type === type && page.slug === slug) || null;
 };
 
+const BOOKING_HASH = "#appointment-modal";
+
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
@@ -28,6 +30,12 @@ export default function App() {
 
   useEffect(() => {
     const syncRoute = () => {
+      if (window.location.hash === BOOKING_HASH) {
+        setDetailPage(null);
+        openBooking();
+        return;
+      }
+
       const nextDetailPage = getCurrentDetailPage();
       setDetailPage(nextDetailPage);
 
@@ -42,6 +50,7 @@ export default function App() {
     };
 
     window.addEventListener("hashchange", syncRoute);
+    syncRoute();
     return () => window.removeEventListener("hashchange", syncRoute);
   }, []);
 

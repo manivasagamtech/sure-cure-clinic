@@ -3,6 +3,15 @@ import { clinic } from "../data/clinicData.js";
 import HeroMedia from "./HeroMedia.jsx";
 
 export default function Hero({ onBook }) {
+  const openBooking = () => {
+    if (typeof onBook === "function") {
+      onBook();
+      return;
+    }
+
+    window.location.hash = "appointment-modal";
+  };
+
   return (
     <section className="hero-section" id="home">
       <HeroMedia />
@@ -16,7 +25,7 @@ export default function Hero({ onBook }) {
             movement recovery in Pune.
           </p>
           <div className="hero-actions">
-            <button className="primary-button" type="button" onClick={onBook}>
+            <button className="primary-button" type="button" onClick={openBooking}>
               Book appointment
               <ArrowRight size={18} />
             </button>

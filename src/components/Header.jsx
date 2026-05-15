@@ -6,6 +6,15 @@ export default function Header({ onBook }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeGroup, setActiveGroup] = useState(null);
 
+  const openBooking = () => {
+    if (typeof onBook === "function") {
+      onBook();
+      return;
+    }
+
+    window.location.hash = "appointment-modal";
+  };
+
   const closeMenus = () => {
     setIsMenuOpen(false);
     setActiveGroup(null);
@@ -17,7 +26,7 @@ export default function Header({ onBook }) {
         <span>{clinic.location}</span>
         <span>Advanced physiotherapy and rehabilitation care</span>
         <a href={clinic.phoneHref}>Call {clinic.phoneDisplay}</a>
-        <button type="button" onClick={onBook}>
+        <button type="button" onClick={openBooking}>
           Book appointment
         </button>
       </div>
@@ -70,7 +79,7 @@ export default function Header({ onBook }) {
               type="button"
               onClick={() => {
                 closeMenus();
-                onBook();
+                openBooking();
               }}
             >
               <CalendarCheck size={18} />
@@ -84,7 +93,7 @@ export default function Header({ onBook }) {
             <Phone size={18} />
             Call Now
           </a>
-          <button className="header-appointment" type="button" onClick={onBook}>
+          <button className="header-appointment" type="button" onClick={openBooking}>
             <CalendarCheck size={18} />
             Make Appointment
           </button>

@@ -7,7 +7,7 @@ export default function Footer({ onBook }) {
       return;
     }
 
-    window.location.hash = "appointment";
+    window.location.hash = "appointment-modal";
   };
 
   return (
