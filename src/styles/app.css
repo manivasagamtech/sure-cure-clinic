@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 :root {
+  --font-body: "Poppins", sans-serif;
+  --font-display: "Poppins", sans-serif;
   --ink: #241b22;
   --muted: #6f5965;
   --cream: #fff8ee;
@@ -28,7 +30,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
+  font-weight: 500;
   color: var(--ink);
   background:
     linear-gradient(135deg, rgba(255, 217, 232, 0.48), rgba(248, 231, 191, 0.24) 36%, rgba(255, 248, 238, 0.9)),
@@ -96,7 +99,7 @@ img {
 .section-heading h2,
 .hero-copy h1 {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   line-height: 1.04;
 }
@@ -132,7 +135,8 @@ img {
   min-height: 52px;
   border-radius: 999px;
   padding: 0 22px;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
@@ -162,6 +166,8 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
+  font-family: var(--font-body);
+  letter-spacing: 0;
 }
 
 .utility-strip {
@@ -174,7 +180,8 @@ img {
   color: var(--white);
   background: linear-gradient(90deg, var(--plum), var(--rose-600));
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .utility-strip a,
@@ -183,7 +190,7 @@ img {
   color: var(--gold-soft);
   background: transparent;
   font: inherit;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -225,7 +232,8 @@ img {
   border-radius: 18px;
   color: var(--white);
   background: linear-gradient(135deg, var(--rose-600), var(--gold));
-  font-weight: 900;
+  font-family: var(--font-display);
+  font-weight: 800;
 }
 
 .brand-lockup strong,
@@ -237,6 +245,8 @@ img {
   max-width: 210px;
   color: var(--muted);
   font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .primary-nav {
@@ -271,7 +281,8 @@ img {
   gap: 5px;
   padding: 14px 13px;
   border-radius: 999px;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
 }
 
 .nav-link:hover,
@@ -310,7 +321,8 @@ img {
   padding: 12px 14px;
   border-radius: 14px;
   color: var(--muted);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .nav-dropdown a:hover {
@@ -667,7 +679,7 @@ img {
 .service-card span {
   color: var(--rose-600);
   font-size: 0.82rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -693,7 +705,7 @@ img {
   color: var(--plum);
   background: transparent;
   padding: 0;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -727,7 +739,7 @@ img {
   gap: 8px;
   margin-bottom: 28px;
   color: var(--plum);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .detail-hero h1 {
@@ -916,7 +928,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.12);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .method-chip svg {
@@ -943,7 +955,7 @@ img {
 
 .step-number {
   color: var(--gold);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: 2.6rem;
   line-height: 1;
@@ -1014,7 +1026,7 @@ img {
 }
 
 .appointment-form label span {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .appointment-form input,
@@ -1051,13 +1063,14 @@ img {
   min-height: 24px;
   margin: 0;
   color: var(--rose-600);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .site-footer {
   padding: 34px 0;
   background: var(--plum);
   color: var(--white);
+  font-family: var(--font-body);
 }
 
 .footer-grid {
@@ -1074,7 +1087,7 @@ img {
 
 .site-footer a {
   color: var(--gold-soft);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .site-footer button {
@@ -1083,7 +1096,7 @@ img {
   background: transparent;
   padding: 0;
   font: inherit;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -1125,7 +1138,7 @@ img {
   margin: 0;
   max-width: 16ch;
   color: var(--plum);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 3.35rem);
   line-height: 1.08;
