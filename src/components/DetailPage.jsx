@@ -22,10 +22,9 @@ export default function DetailPage({ page }) {
               <img src={page.image} alt={page.imageAlt} />
             </div>
             <Icon size={34} />
-            <strong>Personalized assessment first</strong>
+            <strong>Assessment before treatment</strong>
             <span>
-              The care plan is chosen after understanding symptoms, daily routine, movement limits,
-              and recovery goals.
+              Treatment is suggested after checking the concern, movement limits and recovery goals.
             </span>
           </div>
         </div>
@@ -37,12 +36,11 @@ export default function DetailPage({ page }) {
             <div className="detail-content__image">
               <img src={page.image} alt={page.imageAlt} />
             </div>
-            <h2>Understanding {page.title}</h2>
+            <h2>About {page.title}</h2>
             <p>{page.details}</p>
             <p>
-              Patients usually need more than one isolated treatment. The clinic looks at pain level,
-              movement quality, posture, strength, activity demands, and recovery history before
-              deciding the best direction.
+              During the visit, the clinic checks pain level, movement, posture, strength and daily
+              activity needs before deciding the right treatment direction.
             </p>
 
             <div className="detail-list-grid">
@@ -66,9 +64,9 @@ export default function DetailPage({ page }) {
 
             <h2>Care approach at Sure Cure</h2>
             <p>
-              The treatment plan can include hands-on therapy, guided exercises, mobility correction,
-              pain-relief modalities, strengthening, taping, ergonomic changes, and home-care advice.
-              The aim is to reduce discomfort while improving what the patient can do in real life.
+              Treatment may include hands-on therapy, guided exercise, electrotherapy, taping,
+              posture correction and home-care advice. The aim is to reduce discomfort and make
+              everyday movement easier.
             </p>
           </article>
 

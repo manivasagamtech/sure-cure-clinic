@@ -6,9 +6,9 @@ export default function TreatmentMethods() {
     <section className="section methods-section">
       <div className="container methods-grid">
         <SectionHeading
-          kicker="Treatment methods"
-          title="Modern clinic tools, hands-on therapy, and guided rehab under one plan."
-          body="The treatment method is selected after assessment, based on pain stage, movement limits, tolerance, and recovery goals."
+          kicker="Clinic treatments"
+          title="Hands-on therapy, machines and guided rehab."
+          body="Treatment is selected after assessment, based on pain, movement limits and recovery goals."
         />
         <div className="method-board">
           {treatmentMethods.map((method) => {

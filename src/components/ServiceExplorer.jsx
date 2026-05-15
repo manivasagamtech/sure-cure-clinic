@@ -17,9 +17,9 @@ export default function ServiceExplorer() {
       <div className="container">
         <div className="services-topline">
           <SectionHeading
-            kicker="Service portfolio"
-            title="Clear service categories with detailed explanations for every patient need."
-            body="The layout separates conditions from therapy methods so visitors can find either their symptom area or the exact treatment they are looking for."
+            kicker="Services"
+            title="Physiotherapy care for pain, movement and recovery."
+            body="Choose a health concern or a therapy service to view details and request an appointment."
           />
           <div className="tab-switcher" role="tablist" aria-label="Service categories">
             {tabs.map((tab) => (

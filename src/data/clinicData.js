@@ -143,9 +143,9 @@ export const conditions = [
     image: "https://images.pexels.com/photos/7298893/pexels-photo-7298893.jpeg?auto=compress&cs=tinysrgb&w=900",
     imageAlt: "Person holding their lower back to show chronic pain discomfort",
     summary:
-      "Care for persistent pain patterns that affect sleep, posture, movement confidence, and daily routines.",
+      "Support for long-lasting body pain that affects sleep, work, posture and daily movement.",
     details:
-      "The clinic combines assessment, mobility work, strengthening, and symptom management so patients can reduce flare-ups and regain practical control.",
+      "Chronic pain needs careful assessment and steady rehabilitation. Treatment may include pain education, mobility work, strengthening and practical home advice to reduce repeated flare-ups.",
   },
   {
     title: "Disc Problems and Sciatica",
@@ -153,9 +153,9 @@ export const conditions = [
     image: "https://images.pexels.com/photos/20860586/pexels-photo-20860586.jpeg?auto=compress&cs=tinysrgb&w=900",
     imageAlt: "Physiotherapist assessing a patient with back pain in a clinic",
     summary:
-      "Rehabilitation for back pain, radiating leg pain, nerve irritation, and spine-related movement restriction.",
+      "Care for low back pain, leg pain, nerve irritation and difficulty with sitting, bending or walking.",
     details:
-      "Treatment focuses on reducing irritability, improving movement tolerance, and rebuilding strength without forcing painful positions.",
+      "Disc and sciatic pain can affect routine work, travel and sleep. The treatment plan focuses on reducing pain sensitivity, improving safe movement and rebuilding back and hip strength.",
   },
   {
     title: "Headaches and Migraine",
@@ -163,9 +163,9 @@ export const conditions = [
     image: "https://images.pexels.com/photos/7298881/pexels-photo-7298881.jpeg?auto=compress&cs=tinysrgb&w=900",
     imageAlt: "Person holding the neck area during neck pain and headache discomfort",
     summary:
-      "Support for recurring headaches where neck tension, posture load, and muscle restriction may contribute.",
+      "Treatment support for headaches linked with neck tightness, posture strain and muscle tension.",
     details:
-      "Therapy may include neck mobility, trigger point work, postural correction, relaxation strategies, and ergonomic changes.",
+      "Headaches and migraine symptoms may be influenced by neck stiffness, screen posture and shoulder tension. Therapy may include neck mobility, trigger-point care, posture correction and ergonomic guidance.",
   },
   {
     title: "Arthritis and Frozen Shoulder",
@@ -173,9 +173,9 @@ export const conditions = [
     image: "https://images.pexels.com/photos/30483023/pexels-photo-30483023.jpeg?auto=compress&cs=tinysrgb&w=900",
     imageAlt: "Physiotherapist adjusting a patient's shoulder during therapy",
     summary:
-      "Mobility-focused treatment for joint stiffness, pain, shoulder restriction, and reduced functional range.",
+      "Care for joint pain, shoulder stiffness and reduced movement during daily activities.",
     details:
-      "The plan gradually improves range, strength, and usable movement while respecting pain sensitivity and tissue stage.",
+      "Arthritis and frozen shoulder can limit dressing, reaching and lifting. Treatment works on pain control, joint mobility, stretching and strengthening at a comfortable pace.",
   },
 ];
 
@@ -187,7 +187,7 @@ export const services = [
     imageAlt: "Physiotherapist working on neck muscle pain in a clinic setting",
     category: "Pain modulation",
     description:
-      "Targets tight trigger points and overactive muscles to support pain relief, better mobility, and smoother rehabilitation work.",
+      "Used for selected trigger points and tight muscles to support pain relief and easier movement.",
   },
   {
     title: "Regeneration Therapy (PRP)",
@@ -196,7 +196,7 @@ export const services = [
     imageAlt: "Clinical consultation before a regenerative therapy plan",
     category: "Recovery support",
     description:
-      "Used in selected cases where tissue healing support and recovery planning are important parts of the treatment path.",
+      "A recovery-support option for selected tendon, joint or soft-tissue concerns after clinical review.",
   },
   {
     title: "Joint Mobilizations",
@@ -205,7 +205,7 @@ export const services = [
     imageAlt: "Physiotherapist mobilizing a patient's arm and shoulder",
     category: "Mobility care",
     description:
-      "Hands-on techniques to improve restricted joints, reduce stiffness, and help patients move with more comfort.",
+      "Hands-on techniques for stiff joints, restricted movement and pain during daily activity.",
   },
   {
     title: "Osteopathic Joint Analysis and Manipulations",
@@ -214,7 +214,7 @@ export const services = [
     imageAlt: "Physiotherapist performing a neck and joint assessment",
     category: "Movement assessment",
     description:
-      "A structured approach to evaluate movement restrictions and apply targeted manual correction where appropriate.",
+      "Clinical movement checks with manual correction when joint restriction is suitable for treatment.",
   },
   {
     title: "Sports Taping",
@@ -223,7 +223,7 @@ export const services = [
     imageAlt: "Therapist applying kinesio tape for supportive therapy",
     category: "Support and stability",
     description:
-      "Taping support for overloaded or recovering areas, helping patients manage strain while returning to activity.",
+      "Supportive taping for sports strain, joint overload and return-to-activity guidance.",
   },
   {
     title: "Strength and Conditioning",
@@ -232,7 +232,7 @@ export const services = [
     imageAlt: "Physiotherapist helping a patient with a back exercise",
     category: "Performance rehab",
     description:
-      "Progressive exercise plans that rebuild capacity, improve resilience, and support long-term return to function.",
+      "Exercise-based rehab for strength, balance, stamina and return to work or sport.",
   },
   {
     title: "Nutritional Consultation",
@@ -241,7 +241,7 @@ export const services = [
     imageAlt: "Nutrition consultation with fruits and a health professional",
     category: "Lifestyle support",
     description:
-      "Practical guidance around recovery habits, body weight goals, and routines that support musculoskeletal health.",
+      "Practical food and habit guidance to support recovery, weight goals and musculoskeletal health.",
   },
   {
     title: "Obesity Management",
@@ -250,7 +250,7 @@ export const services = [
     imageAlt: "Guided physiotherapy exercise for safe movement progression",
     category: "Guided movement",
     description:
-      "Movement planning that considers joint load, stamina, confidence, and safe progression for long-term consistency.",
+      "Safe movement planning for weight management, joint comfort, stamina and routine building.",
   },
   {
     title: "Ergonomic Guidance",
@@ -259,7 +259,7 @@ export const services = [
     imageAlt: "Health professional explaining guidance during a desk-based consultation",
     category: "Work and posture",
     description:
-      "Workstation and daily posture guidance for patients dealing with neck, back, shoulder, or repetitive strain issues.",
+      "Workstation and posture advice for neck, back, shoulder and repetitive strain complaints.",
   },
   {
     title: "Aesthetic Management",
@@ -268,7 +268,7 @@ export const services = [
     imageAlt: "Clinical aesthetic treatment being performed on a patient's face",
     category: "Extended care",
     description:
-      "A supportive service area connected to the clinic's wider care skillset and medical cosmetology training.",
+      "Selected aesthetic care services offered with Dr. Sujata's medical cosmetology training.",
   },
   {
     title: "Pilates",
@@ -277,7 +277,7 @@ export const services = [
     imageAlt: "Pilates-style controlled movement and stretching session",
     category: "Control and balance",
     description:
-      "Controlled movement training for core strength, posture, breathing, alignment, balance, and body awareness.",
+      "Controlled movement sessions for core strength, posture, breathing, balance and body awareness.",
   },
 ];
 
@@ -298,44 +298,44 @@ export const appointmentOptions = [
 ];
 
 const defaultConcerns = [
-  "Pain or stiffness affecting everyday movement",
-  "Reduced confidence while working, exercising, or doing daily activities",
-  "Symptoms that need a structured assessment before treatment starts",
+  "Pain or stiffness during daily movement",
+  "Difficulty with work, exercise or household activity",
+  "Need for assessment before starting treatment",
 ];
 
 const defaultApproach = [
-  "Detailed history and movement assessment",
-  "Treatment selected according to symptoms, tolerance, and recovery stage",
-  "Home guidance and progression plan for lasting improvement",
+  "History taking and movement assessment",
+  "Treatment selected according to symptoms and comfort",
+  "Home advice with gradual progression",
 ];
 
 const conditionDetails = {
   "Chronic Pain Syndrome": {
     concerns: ["Long-lasting pain that changes daily activity", "Fear of movement or repeated flare-ups", "Sleep disturbance and posture guarding"],
-    approach: ["Pain history and movement assessment", "Gentle mobility and graded strengthening", "Education for pacing, posture, and recurrence control"],
+    approach: ["Pain history and movement assessment", "Gentle mobility and graded strengthening", "Advice for pacing, posture and flare-up control"],
   },
   "Disc Problems and Sciatica": {
     concerns: ["Low back pain with leg symptoms", "Tingling, tightness, or nerve irritation", "Difficulty bending, sitting, walking, or lifting"],
-    approach: ["Spine and nerve sensitivity assessment", "Pain-calming positions and mobility drills", "Core, hip, and posture strengthening progression"],
+    approach: ["Spine and nerve sensitivity assessment", "Pain-calming positions and mobility work", "Core, hip and posture strengthening"],
   },
   "Headaches and Migraine": {
     concerns: ["Repeated headaches linked with neck stiffness", "Shoulder tension and screen-related posture load", "Migraine episodes worsened by muscle tightness"],
-    approach: ["Neck, shoulder, and posture assessment", "Manual therapy and mobility restoration", "Ergonomic guidance and home exercises"],
+    approach: ["Neck, shoulder and posture assessment", "Manual therapy and mobility work", "Ergonomic guidance and home exercises"],
   },
   "Arthritis and Frozen Shoulder": {
     concerns: ["Painful stiffness around shoulder or joints", "Reduced range while dressing, reaching, or lifting", "Arthritic discomfort affecting daily function"],
-    approach: ["Joint range and irritability assessment", "Mobilization and progressive stretching", "Strengthening for function and long-term support"],
+    approach: ["Joint range and pain assessment", "Mobilization and progressive stretching", "Strengthening for daily function"],
   },
 };
 
 const serviceDetails = {
   "Dry Needling Techniques": {
     concerns: ["Trigger point pain", "Muscle tightness limiting movement", "Pain that does not settle with stretching alone"],
-    approach: ["Identify sensitive muscle bands", "Apply needling where clinically suitable", "Follow with mobility and strengthening work"],
+    approach: ["Identify sensitive muscle bands", "Apply needling where clinically suitable", "Follow with mobility and strengthening"],
   },
   "Regeneration Therapy (PRP)": {
     concerns: ["Persistent tendon or joint-related complaints", "Recovery cases needing structured follow-up", "Pain where healing support is part of the plan"],
-    approach: ["Clinical screening and suitability review", "Recovery planning around the procedure", "Progressive rehabilitation after symptom response"],
+    approach: ["Clinical screening and suitability review", "Recovery planning around the procedure", "Progressive rehabilitation after response"],
   },
   "Joint Mobilizations": {
     concerns: ["Joint stiffness", "Restricted movement range", "Pain with daily movement"],
@@ -343,7 +343,7 @@ const serviceDetails = {
   },
   "Sports Taping": {
     concerns: ["Sports strain", "Joint overload", "Need for short-term support during activity"],
-    approach: ["Assess activity and support need", "Apply taping for the target area", "Guide safe loading and return to movement"],
+    approach: ["Assess activity and support need", "Apply taping for the target area", "Guide safe loading and return to activity"],
   },
   Pilates: {
     concerns: ["Poor core control", "Postural imbalance", "Need for gentle strength and mobility work"],
@@ -367,7 +367,7 @@ export const detailPages = [
     slug: slugify(service.title),
     summary: service.description,
     details:
-      "This therapy is selected after assessment and combined with exercise, education, and follow-up guidance so the treatment supports a complete recovery plan.",
+      "This service is recommended only after assessment. It may be combined with exercise, home advice and follow-up guidance when needed.",
     concerns: serviceDetails[service.title]?.concerns || defaultConcerns,
     approach: serviceDetails[service.title]?.approach || defaultApproach,
   })),

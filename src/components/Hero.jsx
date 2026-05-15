@@ -12,8 +12,8 @@ export default function Hero({ onBook }) {
           <span className="section-kicker">Pune physiotherapy and rehab clinic</span>
           <h1>{clinic.name}</h1>
           <p>
-            A warm, premium physiotherapy experience for pain relief, movement recovery, sports
-            rehabilitation, and guided long-term wellness.
+            Physiotherapy care for pain relief, sports rehab, posture problems, joint stiffness and
+            movement recovery in Pune.
           </p>
           <div className="hero-actions">
             <button className="primary-button" type="button" onClick={onBook}>

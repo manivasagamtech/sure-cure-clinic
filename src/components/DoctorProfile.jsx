@@ -17,8 +17,8 @@ export default function DoctorProfile() {
         <div className="profile-copy">
           <SectionHeading
             kicker="Doctor profile"
-            title="Led by Dr. Sujata with a strong musculoskeletal and sports medicine background."
-            body="The clinic works with patients who need pain relief, movement restoration, posture correction, activity recovery, and practical guidance for daily life."
+            title="Meet Dr. Sujata Pardeshi Sure."
+            body="Consultant physiotherapist with 15 years of clinical experience in orthopaedic physiotherapy, sports rehab and pain management."
           />
 
           <div className="doctor-card">
@@ -28,8 +28,8 @@ export default function DoctorProfile() {
               <strong>{clinic.doctorCredentials}</strong>
               <p>
                 Completed Master's in Physiotherapy from Maharashtra University of Health Sciences,
-                Nashik, through M.A.R. College of Physiotherapy and Research, Pune, and has been
-                practicing for 15 years.
+                Nashik, through M.A.R. College of Physiotherapy and Research, Pune. She treats
+                patients for pain relief, mobility, posture correction and rehabilitation.
               </p>
             </div>
           </div>

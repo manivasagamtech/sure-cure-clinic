@@ -3,24 +3,24 @@ import SectionHeading from "./SectionHeading.jsx";
 
 const steps = [
   {
-    title: "Intake message",
+    title: "Send enquiry",
     icon: MessageCircle,
-    text: "Patient submits name, phone, selected service, and the concern through the appointment form.",
+    text: "Share your name, phone number and concern through the appointment form.",
   },
   {
-    title: "Assessment",
+    title: "Clinic review",
     icon: SearchCheck,
-    text: "The clinic reviews symptoms, pain location, movement difficulty, and urgency before guiding the next step.",
+    text: "The clinic checks the concern, pain area and urgency before suggesting the next step.",
   },
   {
-    title: "Treatment plan",
+    title: "Treatment",
     icon: ClipboardList,
-    text: "Care may include manual therapy, exercise, dry needling, taping, electrotherapy, Pilates, or lifestyle support.",
+    text: "Care may include manual therapy, exercise, dry needling, taping, electrotherapy or Pilates.",
   },
   {
-    title: "Progression",
+    title: "Follow-up",
     icon: TrendingUp,
-    text: "Rehab is progressed toward pain reduction, better movement, strength, confidence, and recurrence prevention.",
+    text: "Rehab is progressed with home advice, strength work and review when needed.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function RecoveryProcess() {
       <div className="container">
         <SectionHeading
           kicker="Patient journey"
-          title="A polished appointment flow from first message to structured recovery."
+          title="From appointment enquiry to recovery plan."
           align="center"
         />
         <div className="process-track">
